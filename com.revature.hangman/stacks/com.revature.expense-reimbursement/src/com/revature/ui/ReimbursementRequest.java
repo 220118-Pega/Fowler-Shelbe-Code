@@ -1,9 +1,9 @@
 
-package reimbursementrequest;
+package com.revature.ui;
 
 import java.util.Scanner;
 
-public class Ticket {
+public class ReimbursementRequest {
 	String userId;
 	String transactionAmount;
 	String date;
@@ -23,7 +23,7 @@ public class Ticket {
 
 	//methods
 	@SuppressWarnings("resource")
-	public Ticket() {
+	public ReimbursementRequest() {
 		System.out.println("Please enter transaction type: ");
 		transactiontype = new Scanner(System.in).nextLine();
 		System.out.println("Please enter transaction amount: ");
@@ -32,7 +32,7 @@ public class Ticket {
 		date = new Scanner(System.in).nextLine();
 	}
 
-	public Ticket(String userId2, String transactionAmount2, String transactionDate, String transactionType2) {
+	public ReimbursementRequest(String userId2, String transactionAmount2, String transactionDate, String transactionType2) {
 		// TODO Auto-generated constructor stub
 		this.userId = userId2;
 		this.transactionAmount = transactionAmount;
