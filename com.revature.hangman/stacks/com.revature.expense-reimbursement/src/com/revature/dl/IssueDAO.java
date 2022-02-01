@@ -12,12 +12,15 @@ package com.revature.dl;
 	import org.apache.logging.log4j.LogManager;
 	import org.apache.logging.log4j.Logger;
 
+import com.revature.bl.Solution;
+
 	
 
 	public class IssueDAO implements DAO<Issue, Integer> {
 	private final Logger logger = LogManager.getLogger(this.getClass());
 
-		public Issue findById(Integer id) {
+	@Override	
+	public Issue findbyId(Integer id) {
 			// try with resources block, after the try block finishes executing, it
 			// disposes of the resources for you
 			try (Connection conn = ConnectionFactory.getInstance().getConnection()) {
@@ -75,11 +78,7 @@ package com.revature.dl;
 
 		}
 
-		@Override
-		public Issue findbyId(Integer id) {
-			// TODO Auto-generated method stub
-			return null;
-		}
+
 
 	}
 
