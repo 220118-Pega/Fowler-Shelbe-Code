@@ -121,3 +121,23 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognise
 	... 25 common frames omitted
 2022-02-01 19:54:58,471 [Worker-62: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: org.apache.maven:maven-model:3.8.4-SNAPSHOT @ /Users/shelbefowler/Documents/GitHub/Fowler-Shelbe-Code/com.revature.expense-reimbursement/maven-model/pom.xml.
 2022-02-01 20:04:55,994 [Worker-76: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: org.apache.maven:maven-model:3.8.4-SNAPSHOT @ /Users/shelbefowler/Documents/GitHub/Fowler-Shelbe-Code/com.revature.expense-reimbursement/maven-model/pom.xml.
+2022-02-02 10:29:05,802 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-02-02 10:29:08,836 [Worker-3: reload maven project] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Failed to read Maven project: Some problems were encountered while processing the POMs:
+[FATAL] Non-readable POM /Users/shelbefowler/Documents/GitHub/Fowler-Shelbe-Code/com.revature.expense-reimbursement/maven-model/pom.xml: /Users/shelbefowler/Documents/GitHub/Fowler-Shelbe-Code/com.revature.expense-reimbursement/maven-model/pom.xml (No such file or directory) @ 
+
+org.apache.maven.project.ProjectBuildingException: Some problems were encountered while processing the POMs:
+[FATAL] Non-readable POM /Users/shelbefowler/Documents/GitHub/Fowler-Shelbe-Code/com.revature.expense-reimbursement/maven-model/pom.xml: /Users/shelbefowler/Documents/GitHub/Fowler-Shelbe-Code/com.revature.expense-reimbursement/maven-model/pom.xml (No such file or directory) @ 
+
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProjects(MavenImpl.java:696)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$13(ProjectRegistryManager.java:864)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:182)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:156)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:103)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:1022)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectsWithDependencies(ProjectRegistryManager.java:860)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:210)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:87)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:255)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:643)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$3.run(MavenPomEditor.java:963)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
