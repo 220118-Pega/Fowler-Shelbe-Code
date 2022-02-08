@@ -21,6 +21,12 @@ public class EmployeeBL implements IEmployeeBL {
 		
 	}
 
+	@Override
+	public Object getTicketById(int parseInt) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 		
 	}

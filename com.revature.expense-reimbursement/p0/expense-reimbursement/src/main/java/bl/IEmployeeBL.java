@@ -6,4 +6,6 @@ public interface IEmployeeBL {
 	void addEmployee (Employee employee);
 
 	void updateEmployee(Employee employee) throws Exception;
+
+	Object getTicketById(int parseInt);
 }
