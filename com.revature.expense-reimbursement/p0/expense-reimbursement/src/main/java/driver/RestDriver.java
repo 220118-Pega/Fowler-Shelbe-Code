@@ -17,19 +17,25 @@ import utilis.Router;
 
 
 public class RestDriver {
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		// Create Controllers 
-		IController tControler = new TicketController(
-				new TicketBL(new DBRepository(new EmployeeDAO(), new TicketDAO())));
+	
+		public static void main(String[] args) {
+			
+			IController tControler = new TicketController(
+					new TicketBL(new DBRepository(new EmployeeDAO(), new TicketDAO())));
+//			IController employeeController = new EmployeeControler(
+//					new EmployeeBL(new DBRepository(new EmployeeDAO(), new TicketDAO())));
+					
+			Javalin app = Javalin.create(config -> {
+				config.registerPlugin(new OpenApiPlugin(getOpenApiOptions()));
+			}).start(4302);
+			Router router = new Router(app, tControler, tControler, null);
+			router.setUpEndPoints();
+			
+
+		}
 		
-		Javalin app = Javalin.create(config -> {
-			config.registerPlugin(new OpenApiPlugin(getOpenApiOptions()));}).start(9102);
-		
-		Router router = new Router(app, tControler);
-		router.setUpEndPoints();
-	}
-		
+	
+
 
 
 

@@ -1,5 +1,6 @@
 package bl;
 
+import dl.DBRepository;
 import dl.IRepository;
 import models.Employee;
 
@@ -7,6 +8,14 @@ public class EmployeeBL implements IEmployeeBL {
 	private IRepository repo;
 	
 	
+	public EmployeeBL(DBRepository dbRepository) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public EmployeeBL() {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public void addEmployee(Employee employee) {
 		// TODO Auto-generated method stub
