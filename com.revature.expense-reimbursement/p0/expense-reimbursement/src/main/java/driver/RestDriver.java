@@ -27,7 +27,7 @@ public class RestDriver {
 					
 			Javalin app = Javalin.create(config -> {
 				config.registerPlugin(new OpenApiPlugin(getOpenApiOptions()));
-			}).start(4302);
+			}).start(4802);
 			Router router = new Router(app, tControler, tControler, null);
 			router.setUpEndPoints();
 			
@@ -42,7 +42,7 @@ public class RestDriver {
 
 	private static OpenApiOptions getOpenApiOptions() {
 		// Configuring swagger
-		// We'll use swagger for documentation and testing our API
+		// I'll use swagger for documentation and testing my API
 		Info applicationInfo = new Info().version("1.0").description("p0");
 		return new OpenApiOptions(applicationInfo).path("/swagger-docs")
 				.swagger(new SwaggerOptions("/swagger").title("p0 API Docs"));
